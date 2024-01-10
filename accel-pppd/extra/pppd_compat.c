@@ -609,6 +609,7 @@ static void fill_argv(char **argv, struct pppd_compat_pd *pd, char *path)
 	u_inet_ntoa(pd->ipv4_peer_addr, argv[5]);
 	argv[6] = pd->ses->ctrl->calling_station_id;
 	argv[7] = NULL;
+	argv[9] = pd->ses->terminate_cause;
 }
 
 static void fill_env(char **env, char *mem, struct pppd_compat_pd *pd)
