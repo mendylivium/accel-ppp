@@ -3249,7 +3249,7 @@ static int l2tp_recv_HELLO(struct l2tp_conn_t *conn,
 		return 0;
 	}
 
-	log_tunnel(log_debug, conn, "handling HELLO\n");
+	log_tunnel(log_info1, conn, "handling HELLO\n");
 
 	if (conn->hello_timer.tpd)
 		triton_timer_mod(&conn->hello_timer, 0);
